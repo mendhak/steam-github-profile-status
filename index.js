@@ -12,22 +12,25 @@ function onGetSteamUser(err, user){
         var currentGame = user.stateMessage.split(">")[1]; // Get everything after the <br/>
         if(currentGame.length > 0){
             console.log(`User is in-game: ${currentGame}`);
-            const profileStatus = new githubProfileStatus.GitHubProfileStatus({
-                token: process.env.GITHUB_ACCESS_TOKEN,
-            });
-
-            var expiresAt = new Date();
-            expiresAt.setHours(expiresAt.getHours() + 1);
-
-            profileStatus.set({
-                emoji: ':video_game:',
-                message: currentGame,
-                limitedAvailability: true,
-                expiresAt: expiresAt,
-            }).then((stat) => {
-                console.log(stat);
-            });
-
+            setGithubUserProfileStatus(currentGame);
         }
     }
+}
+
+function setGithubUserProfileStatus(currentGame){
+    const profileStatus = new githubProfileStatus.GitHubProfileStatus({
+        token: process.env.GITHUB_ACCESS_TOKEN,
+    });
+
+    var expiresAt = new Date();
+    expiresAt.setHours(expiresAt.getHours() + 1);
+
+    profileStatus.set({
+        emoji: ':video_game:',
+        message: currentGame,
+        limitedAvailability: true,
+        expiresAt: expiresAt,
+    }).then((stat) => {
+        console.log(stat);
+    });
 }
