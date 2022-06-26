@@ -2,12 +2,14 @@ var SteamCommunity = require('steamcommunity');
 var githubProfileStatus = require('github-profile-status');
 
 let community = new SteamCommunity();
-community.getSteamUser(new SteamCommunity.SteamID('76561197962020667'), (err, user) => {
+community.getSteamUser(new SteamCommunity.SteamID('76561197962020667'), onGetSteamUser);
+
+function onGetSteamUser(err, user){
     console.debug(user);
 
     if(user.onlineState === 'in-game'){
 
-        var currentGame = user.stateMessage.split(">")[1];
+        var currentGame = user.stateMessage.split(">")[1]; // Get everything after the <br/>
         if(currentGame.length > 0){
             console.log(`User is in-game: ${currentGame}`);
             const profileStatus = new githubProfileStatus.GitHubProfileStatus({
@@ -27,7 +29,5 @@ community.getSteamUser(new SteamCommunity.SteamID('76561197962020667'), (err, us
             });
 
         }
-        
     }
-    
-});
+}
