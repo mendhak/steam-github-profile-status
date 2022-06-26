@@ -1,5 +1,7 @@
 This script will attempt to update your [Github user profile status](https://github.blog/changelog/2019-01-09-set-your-status/) with the game currently being played on Steam.  
 
+The status is set to expire after 1 hour, and the user is marked as Busy.  
+
 To use this script, you'll need to generate a [Github Access Token](https://github.com/settings/tokens) with the `user` scope.  
 
 ## How to use
@@ -10,7 +12,7 @@ To run it as a Github Action:
         uses: mendhak/steam-github-profile-status@v1
         env:
           STEAM_USER_ID: "YOUR_STEAM_USER_ID"
-          GITHUB_ACCESS_TOKEN: "${{ secrets.GITHUB_ACCESS_TOKEN }}"
+          GITHUB_ACCESS_TOKEN: "${{ secrets.MY_GITHUB_ACCESS_TOKEN }}"
 
 You can consider running it [on a Github Action schedule](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule)
 
