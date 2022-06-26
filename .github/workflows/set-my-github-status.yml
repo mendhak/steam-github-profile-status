@@ -4,13 +4,13 @@ on: [push]
 
 jobs:
 
-  testing:
+  set-status:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Set My Github Status From Steam
-        uses: ./
+        uses: mendhak/steam-github-profile-status@v1
         env:
           STEAM_USER_ID: "76561197984170060"
           GITHUB_ACCESS_TOKEN: "${{ secrets.GITHUB_ACCESS_TOKEN }}"
