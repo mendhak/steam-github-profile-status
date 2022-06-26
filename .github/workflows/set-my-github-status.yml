@@ -13,7 +13,7 @@ jobs:
         uses: ./
         env:
           STEAM_USER_ID: "76561197984170060"
-          GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
+          GITHUB_ACCESS_TOKEN: "${{ secrets.GITHUB_ACCESS_TOKEN }}"
           
 
 
