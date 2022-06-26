@@ -12,8 +12,8 @@ jobs:
       - name: Test the action out
         uses: ./
         env:
-          STEAM_USER_ID: 76561197984170060
-          GITHUB_ACCESS_TOKEN: xxxxxxxxxxxxxxxx
+          STEAM_USER_ID: "76561197984170060"
+          GITHUB_ACCESS_TOKEN: "xxxxxxxxxxxxxxxx"
           
 
 
