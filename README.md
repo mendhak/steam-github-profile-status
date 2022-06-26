@@ -11,7 +11,8 @@ To use this script, you'll first need to generate a [Github Access Token](https:
 
 ### Run it as a Github Action
 
-You can consider running it [on a Github Action schedule](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule)
+You can consider running it [on a Github Action schedule](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule).  
+
 
       - name: Set My Github Status From Steam
         uses: mendhak/steam-github-profile-status@v1
@@ -19,6 +20,7 @@ You can consider running it [on a Github Action schedule](https://docs.github.co
           STEAM_USER_ID: "YOUR_STEAM_USER_ID"
           GITHUB_ACCESS_TOKEN: "${{ secrets.MY_GITHUB_ACCESS_TOKEN }}"
 
+Where `MY_GITHUB_ACCESS_TOKEN` is an Actions Secret in your repository, and it contains the Github Access Token value generated above.
 
 ### Run it in a Docker container
 
