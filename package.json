@@ -1,0 +1,17 @@
+{
+  "name": "steam-github-user-profile-status",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "github-profile-status": "^1.0.0",
+    "steamcommunity": "^3.44.1"
+  },
+  "type": "commonjs",
+  "devDependencies": {},
+  "description": "A script to update your Github user status with the game currently being played on Steam"
+}
