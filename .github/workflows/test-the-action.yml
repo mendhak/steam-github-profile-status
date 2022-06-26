@@ -7,12 +7,14 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Test the action out
         uses: ./
         env:
           STEAM_USER_ID: 76561197984170060
           GITHUB_ACCESS_TOKEN: xxxxxxxxxxxxxxxx
-
+          
 
 
       
