@@ -14,6 +14,9 @@ function onGetSteamUser(err, user){
             console.log(`User is in-game: ${currentGame}`);
             setGithubUserProfileStatus(currentGame);
         }
+        else {
+            console.log('No game detected. Nothing to do.');
+        }
     }
 }
 
