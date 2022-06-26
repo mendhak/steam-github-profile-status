@@ -1,4 +1,4 @@
-name: Test the Action
+name: Set My Github Status
 
 on: [push]
 
@@ -9,11 +9,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Test the action out
+      - name: Set My Github Status
         uses: ./
         env:
           STEAM_USER_ID: "76561197984170060"
-          GITHUB_ACCESS_TOKEN: "xxxxxxxxxxxxxxxx"
+          GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
           
 
 
