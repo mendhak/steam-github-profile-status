@@ -1,7 +1,7 @@
 This script will attempt to update your [Github user profile status](https://github.blog/changelog/2019-01-09-set-your-status/) with the game currently being played on Steam.  
 
 * Your Steam Profile page must be set to public.  
-* The status will be set to expire after 1 hour, and not marked as Busy.  
+* The status will be set to expire after 1 hour, and not marked as Busy.  This can be configured through environment variables.   
 
 ![screenshot](screenshot.png)
 
