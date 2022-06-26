@@ -6,6 +6,15 @@ It's a NodeJS script so it should be able to run in a number of different ways. 
 
 This script needs a [Github Access Token](https://github.com/settings/tokens) with the `user` scope.  
 
+To run it as a script:
+
     export STEAM_USER_ID=76561197984170060
     export GITHUB_ACCESS_TOKEN=xxxxxxxxxxxxxxxxx
     node index.js
+
+
+To run it in Docker:
+
+    docker build -t steam-github-profile-status:latest .
+    docker run --rm -e GITHUB_ACCESS_TOKEN=xxxxxxxxxxxxxxxxx -e STEAM_USER_ID=76561197984170060 steam-github-profile-status:latest
+
