@@ -1,0 +1,7 @@
+name: 'Update Github User Status from Steam'
+author: 'Mendhak'
+description: 'This script will attempt to update the Github user profile status with the game currently being played on Steam.'
+runs:
+  using: 'docker'
+  image: 'docker://mendhak/steam-github-profile-status:latest'
+  
