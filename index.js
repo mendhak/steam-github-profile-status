@@ -2,7 +2,7 @@ var SteamCommunity = require('steamcommunity');
 var githubProfileStatus = require('github-profile-status');
 
 let community = new SteamCommunity();
-community.getSteamUser(new SteamCommunity.SteamID('76561197962020667'), onGetSteamUser);
+community.getSteamUser(new SteamCommunity.SteamID(process.env.STEAM_USER_ID), onGetSteamUser);
 
 function onGetSteamUser(err, user){
     console.debug(user);
