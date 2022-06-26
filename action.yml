@@ -1,4 +1,6 @@
 name: 'Update Github User Status from Steam'
+icon: 'aperture'
+color: 'blue' 
 author: 'Mendhak'
 description: 'This script will attempt to update the Github user profile status with the game currently being played on Steam.'
 runs:
