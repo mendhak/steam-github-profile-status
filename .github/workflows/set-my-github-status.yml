@@ -13,7 +13,7 @@ jobs:
       # - name: Checkout
       #   uses: actions/checkout@v2
       - name: Set My Github Status From Steam
-        # To test locally, uses: ./
+        # To test the action on the repo itself, use: ./
         uses: mendhak/steam-github-profile-status@v1.1  
         env:
           STEAM_USER_ID: "76561197984170060"
